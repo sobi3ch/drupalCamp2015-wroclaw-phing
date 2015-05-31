@@ -163,6 +163,17 @@
 </section>
 
 
+<section>
+	<h2>Co to jest Phing?</h2>
+	<h4>
+		Rodzaje PODSTAWOWYCH zadań (<b>TASKS</b>)
+	</h4>
+	<p>
+		AdhocTaskdef, AdhocTypedef, Append, Apply, Available, Basename, Chmod, Chown, Condition, Copy, CvsTask, CvsPass, Delete, Diagnostics, Dirname, Echo, Exec, Fail, Foreach, If, Import, IncludePath, Input, LoadFile, Mkdir, Move, PathToFileSet, Phing, PhingCall, Phingversion, PhpEval, Property, PropertyPrompt, Record, Reflexive, ResolvePath, Switch, Touch, TryCatch, Tstamp, Typedef, UpToDate, WaitFor, Xslt
+	</p>
+</section>
+
+
 
 <!-- #################### INSTALACJA ###################### -->
 				<section>
@@ -200,15 +211,14 @@ $ pear install [--alldeps] phing/phing
 								Główny plik phing'a <code>build.xml</code>
 							</li>
 							<li class="fragment">
-								Podstawowe operacje na plikach (<code>cp, mv, touch</code>)
 							</li>
 							<li class="fragment">
-								Klasyczne wykonanie komend <code>exec</code>
 							</li>
 							<li class="fragment">
-								Drupal <code>drush</code>!
-								<small>jako rozszerzenie</small>
 							</li>
+							
+							
+							
 						</ul>
 					</section>
 
@@ -256,7 +266,56 @@ $ pear install [--alldeps] phing/phing
 					<section>
 						<h2>Podstawy</h2>
 						<p>zmiana nazwy/przenoszenie</p>
-						<img src="images/phing3.png" />
+						<img src="images/phing-move-task-1.png" />
+					</section>
+
+
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>tworzenie</p>
+						<img src="images/phing-touch-1.png" />
+					</section>
+
+					
+					<section>
+						<h2>Podstawy</h2>
+						<p>uruchamianie komend</p>
+						<img src="images/phing-exec-1.png" />
+					</section>
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>uruchamianie komend</p>
+						<img src="images/phing-exec-2.png" />
+					</section>
+
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>uruchamianie komend</p>
+						<img src="images/phing-exec-3.png" />
+					</section>
+
+
+					<section>
+						<h2>Podstawy</h2>
+						<p><code>drush</code> - definicja</p>
+						<img src="images/phing-drush-1.png" />
+					</section>
+
+
+					<section>
+						<h2>Podstawy</h2>
+						<p><code>drush</code> - odświeżanie pamięci podręcznej</p>
+						<img src="images/phing-drush-3.png" />
+					</section>
+
+
+					<section>
+						<h2>Podstawy</h2>
+						<p><code>drush</code> - reset hasla dla UID 1</p>
+						<img src="images/phing-drush-2.png" />
 					</section>
 
 
@@ -266,6 +325,16 @@ $ pear install [--alldeps] phing/phing
 	<section>
 		<h2>Przykłady</h2>
 		<ul>
+			<li class="fragment">
+				Podstawowe operacje na plikach (<code>cp, mv, touch</code>)
+			</li>
+			<li class="fragment">
+				Klasyczne wykonanie komend <code>exec</code>
+			</li>
+			<li class="fragment">
+				Drupal <code>drush</code>!
+				<small>jako rozszerzenie</small>
+			</li>
 			<li>
 				Testowanie
 			</li>
