@@ -111,7 +111,6 @@
 <!-- ###################### CO TO JEST PHING? ##################### -->
 <section>
 	<h2>Co to jest Phing?</h2>
-	<small>.. I jaka jest budowa</small>
 	<ul>
 		<li class="fragment">
 			PHING = PHing is not GNU make
@@ -137,7 +136,6 @@
 
 <section>
 	<h2>Co to jest Phing?</h2>
-	<small>.. I jaka jest budowa</small>
 	<ul>
 		<li class="fragment">
 			Podstawowe elementy
@@ -164,8 +162,7 @@
 					<ul>
 						<li style="width: 700px" class="fragment">
 							<h3>PEAR</h3>
-<pre><code class="bash">
-$ pear channel-discover pear.phing.info
+<pre><code class="bash">$ pear channel-discover pear.phing.info
 $ pear install [--alldeps] phing/phing
 </code></pre>
 						</p>
@@ -202,7 +199,7 @@ $ pear install [--alldeps] phing/phing
 							</li>
 							<li class="fragment">
 								Drupal <code>drush</code>!
-								<small>działa jako rozszerzenie</small>
+								<small>jako rozszerzenie</small>
 							</li>
 						</ul>
 					</section>
@@ -211,15 +208,47 @@ $ pear install [--alldeps] phing/phing
 					<section>
 						<h2>Podstawy</h2>
 						<p>build.xml</p>
-							<pre><code>
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="HelloWorld" default="welcome" basedir="." description="a demo project">
-	<property name="message" value="Hello World!"/>
-	<target name="welcome">
-		<echo msg="${message}"/>
-	</target>
-</project>
-							</code></pre>
+						<img src="images/phing1.png" />
+					</section>
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>build.xml w akcji</p>
+						<pre>
+							<code>$ phing [-f build.xml]</code>
+						</pre>
+					</section>
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>build.xml w akcji</p>
+						<img src="images/phing1-terminal.png" />
+					</section>
+
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>kopiowanie</p>
+						<img src="images/phing-copy-1.png" />
+					</section>
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>kopiowanie</p>
+						<img src="images/phing-copy-2.png" />
+					</section>
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>kopiowanie</p>
+						<img src="images/phing-copy-3.png" />
+					</section>
+
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>zmiana nazwy/przenoszenie</p>
+						<img src="images/phing3.png" />
 					</section>
 
 
@@ -249,9 +278,11 @@ $ pear install [--alldeps] phing/phing
 			<h4>Testowanie</h4>
 		</section>
 		
+		
 		<section>
 			<h4>Wdrażanie</h4>
 		</section>
+		
 		
 		<section>
 			<h4>Ciągła integracja</h4>
@@ -259,6 +290,7 @@ $ pear install [--alldeps] phing/phing
 				ciagla integracja..
 			</p>
 		</section>
+		
 		
 		<section>
 			<h4>Jenkins</h4>

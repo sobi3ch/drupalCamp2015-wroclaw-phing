@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="HelloWorld" default="welcome" basedir="." description="a demo project">
-	<property name="message" value="Hello World!"/>
-	<target name="welcome">
+<project name="Example" default="world">
+	<property name="message" value="Hello"/>
+	
+	<echo>Hi!</echo>
+	
+	<target name="hello">
 		<echo msg="${message}"/>
 	</target>
+	
+	<target name="world" depends="hello">
+		<echo msg="World!"/>
+	</target>
+	
 </project>
