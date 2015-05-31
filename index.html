@@ -211,10 +211,13 @@ $ pear install [--alldeps] phing/phing
 								Główny plik phing'a <code>build.xml</code>
 							</li>
 							<li class="fragment">
+								Proste przetrzymywanie zmiennych
 							</li>
 							<li class="fragment">
+								<code>${attribute}</code>
 							</li>
 							<li class="fragment">
+								Podmienianie wartości zmiennych
 							</li>
 							
 							
@@ -242,81 +245,16 @@ $ pear install [--alldeps] phing/phing
 						<p>build.xml w akcji</p>
 						<img src="images/phing1-terminal.png" />
 					</section>
-
-
-					<section>
-						<h2>Podstawy</h2>
-						<p>kopiowanie</p>
-						<img src="images/phing-copy-1.png" />
-					</section>
-
-					<section>
-						<h2>Podstawy</h2>
-						<p>kopiowanie</p>
-						<img src="images/phing-copy-2.png" />
-					</section>
-
-					<section>
-						<h2>Podstawy</h2>
-						<p>kopiowanie</p>
-						<img src="images/phing-copy-3.png" />
-					</section>
-
-
-					<section>
-						<h2>Podstawy</h2>
-						<p>zmiana nazwy/przenoszenie</p>
-						<img src="images/phing-move-task-1.png" />
-					</section>
-
-
-
-					<section>
-						<h2>Podstawy</h2>
-						<p>tworzenie</p>
-						<img src="images/phing-touch-1.png" />
-					</section>
-
 					
 					<section>
 						<h2>Podstawy</h2>
-						<p>uruchamianie komend</p>
-						<img src="images/phing-exec-1.png" />
-					</section>
-
-					<section>
-						<h2>Podstawy</h2>
-						<p>uruchamianie komend</p>
-						<img src="images/phing-exec-2.png" />
+						<p>Proste przetrzymywanie zmiennych <code>${attribute}</code></p>
+						<img src="images/phing-property.png" />
 					</section>
 
 
-					<section>
-						<h2>Podstawy</h2>
-						<p>uruchamianie komend</p>
-						<img src="images/phing-exec-3.png" />
-					</section>
 
 
-					<section>
-						<h2>Podstawy</h2>
-						<p><code>drush</code> - definicja</p>
-						<img src="images/phing-drush-1.png" />
-					</section>
-
-
-					<section>
-						<h2>Podstawy</h2>
-						<p><code>drush</code> - odświeżanie pamięci podręcznej</p>
-						<img src="images/phing-drush-3.png" />
-					</section>
-
-
-					<section>
-						<h2>Podstawy</h2>
-						<p><code>drush</code> - reset hasla dla UID 1</p>
-						<img src="images/phing-drush-2.png" />
-					</section>
 
 
 
@@ -325,6 +263,9 @@ $ pear install [--alldeps] phing/phing
 	<section>
 		<h2>Przykłady</h2>
 		<ul>
+			<li class="fragment">
+				Warunki (if/else)
+			</li>
 			<li class="fragment">
 				Podstawowe operacje na plikach (<code>cp, mv, touch</code>)
 			</li>
@@ -335,53 +276,96 @@ $ pear install [--alldeps] phing/phing
 				Drupal <code>drush</code>!
 				<small>jako rozszerzenie</small>
 			</li>
-			<li>
-				Testowanie
+			<li class="fragment">
+				Budowanie apki (build)
 			</li>
-			<li>
-				Wdrażanie (deploy)
-			</li>
-			<li>
-				Ciągła integracja
-			</li>
-			<li>
+			<li class="fragment">
 				Jenkins
 			</li>
 		</ul>
 	</section>
 
 	
-		<section>
-			<h4>Testowanie</h4>
-		</section>
-		
-		
-		<section>
-			<h4>Wdrażanie</h4>
-		</section>
-		
-		
-		<section>
-			<h4>Ciągła integracja</h4>
-			<p>
-				ciagla integracja..
-			</p>
-		</section>
+	<section>
+		<h2>Podstawy</h2>
+		<p>Warunki (if/else)</p>
+		<img src="images/phing-if-case-1.png" />
+	</section>
+
+	<section>
+		<h2>Podstawy</h2>
+		<p>Warunki (if/else)</p>
+		<img src="images/phing-if-case-2.png" height="500" />
+	</section>
+
+	<section>
+		<h2>Podstawy</h2>
+		<p>kopiowanie</p>
+		<img src="images/phing-copy-1.png" />
+	</section>
+
+	<section>
+		<h2>Podstawy</h2>
+		<p>kopiowanie</p>
+		<img src="images/phing-copy-2.png" />
+	</section>
+
+	<section>
+		<h2>Podstawy</h2>
+		<p>kopiowanie</p>
+		<img src="images/phing-copy-3.png" />
+	</section>
+
+
+	<section>
+		<h2>Podstawy</h2>
+		<p>zmiana nazwy/przenoszenie</p>
+		<img src="images/phing-move-task-1.png" />
+	</section>
+
+
+
+	<section>
+		<h2>Podstawy</h2>
+		<p>tworzenie</p>
+		<img src="images/phing-touch-1.png" />
+	</section>
+
+	
+	<section>
+		<h2>Podstawy</h2>
+		<p>uruchamianie komend</p>
+		<img src="images/phing-exec-1.png" />
+	</section>
+
+
+	<section>
+		<h2>Podstawy</h2>
+		<p><code>drush</code> - definicja</p>
+		<img src="images/phing-drush-1.png" />
+	</section>
+
+
+	<section>
+		<h2>Podstawy</h2>
+		<p><code>drush</code> - odświeżanie pamięci podręcznej</p>
+		<img src="images/phing-drush-3.png" />
+	</section>
+
+
+	<section>
+		<h2>Podstawy</h2>
+		<p><code>drush</code> - reset hasla dla UID 1</p>
+		<img src="images/phing-drush-2.png" />
+	</section>
+
+
 		
 		
 		<section>
 			<h4>Jenkins</h4>
 			<img src="images/phing_jenkins_configuration.png" />
 		</section>
-
-				<section>
-					<h2>Przykłady</h2>
-				</section>
-
-
-				<section>
-
-				</section>
 
 
 
