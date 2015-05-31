@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+
+
+
+
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				
+				<!-- ######################################################################## -->
+				<!-- ########################### START! ##################################### -->
+				<!-- ######################################################################## -->
+				<section>
+					<img src="images/phing.gif" height="180" width="600"/>
+					<h3>Zautomatyzuj swoje życie z Phing'iem</h3>
+					<p>
+						<small>Autor <a href="https://www.drupal.org/u/sobi3ch">Piotr Sobieszczański</a> / <a href="http://twitter.com/sobi3ch">@sobi3ch</a></small>
+					</p>
+				</section>
+
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<h2>Czego sie dzisiaj dowiemy?</h2>
+					<ul>
+						<li class="fragment">
+							Po co w ogóle automatyzować?
+						</li>
+						<li class="fragment">
+							Co to jest Phing?
+						</li>
+						<li class="fragment">
+							Instalacja
+						</li>
+						<li class="fragment">
+							Przykłady
+						</li>
+						<li class="fragment">
+							Rozszerzanie Phing'a
+						</li>
+					</ul>
+				</section>
+
+
+
+
+<!-- ####################### DLACZEGO POWINNISMY AUTOMATYZOWAC #####################3 -->
+				<section>
+					<h2>Po co w ogóle automatyzować?</h2>
+					<ul>
+						<li class="fragment">
+							Łatwiejsze przekazywanie projektu
+						</li>
+						<li class="fragment">
+							Polepszanie jakości
+						</li>
+						<li class="fragment">
+							Zmniejszenie ilości popełnianych błędów
+						</li>
+						<li class="fragment">
+							Oszczędność czasu
+						</li>
+						<li class="fragment">
+							Konsolidacja skryptów, redukcja <a href="http://blog.testowka.pl/2011/07/14/dlug-technologiczny/">technologicznego długu</a> (techichal debt)
+						</li>
+					</ul>
+				</section>
+
+
+
+<!-- ###################### CO TO JEST PHING? ##################### -->
+<section>
+	<h2>Co to jest Phing?</h2>
+	<small>.. I jaka jest budowa</small>
+	<ul>
+		<li class="fragment">
+			PHING = PHing is not GNU make
+		</li>
+		<li class="fragment">
+			Napisany w PHP, "zgapiony" z projektu Apache Ant.
+		</li>
+		<li class="fragment">
+			Oparty na XML'u
+		</li>
+		<li class="fragment">
+			Wieloplatformowy (*nix, OSX, Windows)
+		</li>
+		<li class="fragment">
+			Integruje wiekszość popularnych narzędzi używanych przy projektach PHP. (Wliczając drush'a)
+		</li>
+		<li class="fragment">
+			Wielozadaniowy! (tasks)
+		</li>
+	</ul>
+</section>
+
+
+<section>
+	<h2>Co to jest Phing?</h2>
+	<small>.. I jaka jest budowa</small>
+	<ul>
+		<li class="fragment">
+			Podstawowe elementy
+		</li>
+		<ul>
+			<li class="fragment">
+					<b>Task</b>: wykonuje konkretne zadanie (np: kopiuj, git commit, drush make itp.)
+			</li>
+			<li class="fragment">
+				<b>Target</b>: kolekcja zadań (cel), opcjonalnie może zależeć od innych zadań
+			</li>
+			<li class="fragment">
+				<b>Project</b>: Głowny wezeł XML'a. Zawiera zbiór celów (targets).
+			</li>
+		</ul>
+	</ul>
+</section>
+
+
+
+<!-- #################### INSTALACJA ###################### -->
+				<section>
+					<h2>Instalacja</h2>
+					<ul>
+						<li style="width: 700px" class="fragment">
+							<h3>PEAR</h3>
+<pre><code class="bash">
+$ pear channel-discover pear.phing.info
+$ pear install [--alldeps] phing/phing
+</code></pre>
+						</p>
+
+						<li class="fragment">
+							<h3>Composer</h3>
+<pre><code>{
+  "require-dev": {
+    "phing/phing": "2.*"
+  }
+}</code></pre>
+						</li>
+						
+						<li class="fragment">
+							<h3>Pakiet Phar</h3>
+							<pre><code>$ php phing-latest.phar</code></pre>
+						</li>
+					</ul>
+				</section>
+
+
+				<!-- ################### PODSTAWY ####################### -->
+					<section>
+						<h2>Podstawy</h2>
+						<ul>
+							<li class="fragment">
+								Główny plik phing'a <code>build.xml</code>
+							</li>
+							<li class="fragment">
+								Podstawowe operacje na plikach (<code>cp, mv, touch</code>)
+							</li>
+							<li class="fragment">
+								Klasyczne wykonanie komend <code>exec</code>
+							</li>
+							<li class="fragment">
+								Drupal <code>drush</code>!
+								<small>działa jako rozszerzenie</small>
+							</li>
+						</ul>
+					</section>
+
+
+					<section>
+						<h2>Podstawy</h2>
+						<p>build.xml</p>
+							<pre><code>
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HelloWorld" default="welcome" basedir="." description="a demo project">
+	<property name="message" value="Hello World!"/>
+	<target name="welcome">
+		<echo msg="${message}"/>
+	</target>
+</project>
+							</code></pre>
+					</section>
+
+
+
+
+<!-- ################### PRZYKLADY ####################### -->
+	<section>
+		<h2>Przykłady</h2>
+		<ul>
+			<li>
+				Testowanie
+			</li>
+			<li>
+				Wdrażanie (deploy)
+			</li>
+			<li>
+				Ciągła integracja
+			</li>
+			<li>
+				Jenkins
+			</li>
+		</ul>
+	</section>
+
+	
+		<section>
+			<h4>Testowanie</h4>
+		</section>
+		
+		<section>
+			<h4>Wdrażanie</h4>
+		</section>
+		
+		<section>
+			<h4>Ciągła integracja</h4>
+			<p>
+				ciagla integracja..
+			</p>
+		</section>
+		
+		<section>
+			<h4>Jenkins</h4>
+			<img src="images/phing_jenkins_configuration.png" />
+		</section>
+
+				<section>
+					<h2>Przykłady</h2>
+				</section>
+
+
+				<section>
+
+				</section>
+
+
+
+<!-- ################## ROZSZERZANIE ################### -->
+				<section>
+					<h2>Rozszerzanie Phing'a</h2>
+				</section>
+
+				<section id="code">
+					<pre><code class="php">
+require_once "phing/Task.php";
+
+class MyEchoTask extends Task {
+    private $message = null; // << wiadomosc dla pliku build.xml
+
+    public function setMessage($str) { // << setter
+        $this->message = $str;
+    }
+
+    public function init() { // << definicja kroków inicjacyjnych 
+        // jakies kroki
+    }
+
+    public function main() { // << glowny punk startu
+        print($this->message);
+    }
+}
+						</code></pre>
+				</section>
+
+
+				<section>
+					<h1>Pytania?</h1>
+					<p>
+						Prezentacja jest dostępna na github'ie.
+							<code>https://github.com/sobi3ch/drupalCamp2015-wroclaw-phing</code>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+<!-- #####################################################
+##################### THE END #######################
+##################################################### -->
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1200,
+
+				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
